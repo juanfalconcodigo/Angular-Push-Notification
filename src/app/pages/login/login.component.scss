@@ -1,0 +1,59 @@
+.container-login {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.container-login-video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    & video {
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
+    }
+}
+
+.container-login-video::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #20002c, #cbb4d4);
+    pointer-events: none;
+    mix-blend-mode: color;
+}
+
+.btn_login {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.container-login-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    & img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.container-login-img::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to right, #20002c, #cbb4d4);
+    pointer-events: none;
+    mix-blend-mode: color;
+}

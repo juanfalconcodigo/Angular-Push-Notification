@@ -1,0 +1,20 @@
+<nz-layout>
+    <nz-sider nzCollapsible [(nzCollapsed)]="isCollapsed" [nzTrigger]="null">
+        <app-menu [isCollapsed]="isCollapsed"></app-menu>
+    </nz-sider>
+    <nz-layout>
+        <app-header [isCollapsed]="isCollapsed" (isCollapsedOutput)="isCollapsed=$event"></app-header>
+        <nz-content>
+            <nz-breadcrumb>
+                <nz-breadcrumb-item>User</nz-breadcrumb-item>
+                <nz-breadcrumb-item>Bill</nz-breadcrumb-item>
+            </nz-breadcrumb>
+
+            <div class="inner-content">
+                <router-outlet></router-outlet>
+            </div>
+
+        </nz-content>
+        <app-footer></app-footer>
+    </nz-layout>
+</nz-layout>
